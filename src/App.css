@@ -1,0 +1,51 @@
+/* @import "node_modules/bootstrap/scss/bootstrap"; */
+@charset "UTF-8";
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --bs-purple-rgb: 138, 43, 226;
+  --bs-gray-rgb: 233, 236, 239;
+}
+.border-dotted {
+  border: dotted;
+  /* var(--bs-purple); */
+}
+.bg-purple,
+.form-check-input:checked {
+  --bs-bg-opacity: 1;
+  /* --bs-purple-rgb: 111, 66, 193; */
+  background-color: rgba(var(--bs-purple-rgb), var(--bs-bg-opacity));
+}
+.no-border {
+  border: none;
+}
+.bg-gray-100 {
+  --bs-bg-opacity: 1;
+  /* --bs-gray-rgb: 233, 236, 239; */
+  background-color: rgba(var(--bs-gray-rgb), var(--bs-bg-opacity));
+}
+.text-purple {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-purple-rgb), var(--bs-text-opacity)) !important;
+}
+.btn-hover {
+  &:hover {
+    background-color: indigo !important;
+  }
+}
+select {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  margin: 20px 0;
+}
+.form-select {
+  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='darkviolet' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  /* --bs-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%6F42C1' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e"); */
+  background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
+}
+.w-15 {
+  width: 15% !important;
+}
